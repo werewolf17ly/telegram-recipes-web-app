@@ -6,12 +6,13 @@ from dotenv import load_dotenv
 load_dotenv()
 
 BOT_TOKEN = os.getenv('BOT_TOKEN', 'YOUR_BOT_TOKEN_HERE')
+WEBAPP_URL = os.getenv('WEBAPP_URL', 'https://your-domain.com')
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
 def web_app_keyboard():
     keyboard = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
-    web_app = types.WebAppInfo("https://your-domain.com")
+    web_app = types.WebAppInfo(WEBAPP_URL)
     button = types.KeyboardButton(text="🍳 Открыть рецепты", web_app=web_app)
     keyboard.add(button)
     return keyboard
@@ -33,5 +34,8 @@ def web_app_handler(message):
     )
 
 if __name__ == '__main__':
-    print("Bot started...")
+    if not WEBAPP_URL.startswith("https://"):
+        print("Warning: WEBAPP_URL should be an HTTPS URL for proper Telegram Web App integration.")
+    
+    print(f"Bot started with Web App URL: {WEBAPP_URL}")
     bot.infinity_polling()
