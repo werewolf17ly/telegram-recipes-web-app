@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - Telegram Web App</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🛒 Выберите аналоги продуктов</h1>
+        <div id="cart-content">
+            <!-- Содержимое корзины будет загружено через JavaScript -->
+        </div>
+        <button id="confirm-cart" class="btn-primary">Подтвердить выбор</button>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/cart.js') }}"></script>
+</body>
+</html>
