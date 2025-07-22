@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рецепт - Telegram Web App</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div id="recipe-detail">
+            <img id="recipe-image" class="recipe-image" alt="Recipe">
+            <h1 id="recipe-name"></h1>
+            <p id="recipe-description"></p>
+            
+            <h2>Ингредиенты:</h2>
+            <ul id="ingredients-list"></ul>
+            
+            <h2>Рецепт приготовления:</h2>
+            <div id="recipe-instructions"></div>
+            
+            <button id="add-to-cart" class="btn-primary">Добавить в корзину</button>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/recipe.js') }}"></script>
+</body>
+</html>
