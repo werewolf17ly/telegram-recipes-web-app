@@ -17,6 +17,55 @@
             <h2>Ингредиенты:</h2>
             <ul id="ingredients-list"></ul>
             
+            <h2>Питательная ценность:</h2>
+            <div id="nutrition-section">
+                <div id="nutrition-loading" class="nutrition-loading">
+                    <div class="loading-spinner"></div>
+                    <p>Рассчитываем питательную ценность...</p>
+                </div>
+                <div id="nutrition-content" class="nutrition-content" style="display: none;">
+                    <div class="nutrition-grid">
+                        <div class="nutrition-card">
+                            <div class="nutrition-value" id="calories-value">-</div>
+                            <div class="nutrition-label">Калории</div>
+                        </div>
+                        <div class="nutrition-card">
+                            <div class="nutrition-value" id="proteins-value">-</div>
+                            <div class="nutrition-label">Белки (г)</div>
+                        </div>
+                        <div class="nutrition-card">
+                            <div class="nutrition-value" id="fats-value">-</div>
+                            <div class="nutrition-label">Жиры (г)</div>
+                        </div>
+                        <div class="nutrition-card">
+                            <div class="nutrition-value" id="carbs-value">-</div>
+                            <div class="nutrition-label">Углеводы (г)</div>
+                        </div>
+                    </div>
+                    <div class="nutrition-details">
+                        <div class="nutrition-detail-item">
+                            <span>Клетчатка:</span>
+                            <span id="fiber-value">- г</span>
+                        </div>
+                        <div class="nutrition-detail-item">
+                            <span>Сахар:</span>
+                            <span id="sugar-value">- г</span>
+                        </div>
+                        <div class="nutrition-detail-item">
+                            <span>Натрий:</span>
+                            <span id="sodium-value">- мг</span>
+                        </div>
+                        <div class="nutrition-detail-item">
+                            <span>Порций:</span>
+                            <span id="servings-value">-</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="nutrition-error" class="nutrition-error" style="display: none;">
+                    <p>Не удалось рассчитать питательную ценность</p>
+                </div>
+            </div>
+            
             <h2>Рецепт приготовления:</h2>
             <div id="recipe-instructions"></div>
             
